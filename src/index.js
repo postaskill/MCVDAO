@@ -1,25 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-import {ThirdwebWeb3Provider} from '@3rdweb/hooks';
+// Import thirdweb provider and Goerli ChainId
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
-const supportedChainIds = [4]; // https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/
-const connectors = {
-  injected: {},
-};
+// This is the chainId your dApp will work on.
+const activeChainId = ChainId.Goerli;
 
+// Wrap your app with the thirdweb provider
 ReactDOM.render(
   <React.StrictMode>
-    <ThirdwebWeb3Provider
-      connectors={connectors}
-      supportedChainIds={supportedChainIds}
-    >
-      <div className="landing">
-        <App />
-      </div>
-    </ThirdwebWeb3Provider>
+    <ThirdwebProvider desiredChainId={activeChainId}>
+      <App />
+    </ThirdwebProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
