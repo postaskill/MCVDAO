@@ -15,8 +15,8 @@ const bundleDrop = sdk.getBundleDropModule(process.env.BUNDLE_DROP_ADDRESS);
   try {
     await bundleDrop.createBatch([
       {
-        name: "Boring NFT",
-        description: "A proof of being bored",
+        name: "MCV DAO MEMBERSHIP NFT",
+        description: "This NFT will give you access to MCVDAO",
         image: readFileSync("scripts/assets/boringdao-nft.gif"),
       },
     ]);
