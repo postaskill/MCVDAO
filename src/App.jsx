@@ -5,8 +5,8 @@ import {ethers} from "ethers";
 
 const sdk = new ThirdwebSDK("rinkeby");
 
-const BUNDLE_DROP_ADDRESS = "0x67a8115E4ADe095e73327b90C25592a0fa693e8d";
-const TOKEN_ADDRESS = "0xF9F1cf9Cb231ef07933F66E2E0857F865893e707";
+const BUNDLE_DROP_ADDRESS = "0xc0FDE8e26e1cF78E9e0581D3cDB5d3b94FFAF34c";
+const TOKEN_ADDRESS = "0x6CE8913B8139B44ea43C2509b0eEf03835fF6345";
 const VOTING_ADDRESS = "0x223d1476320FAE207fe8DF1335d7e7Ed69d05f0e";
 
 const bundleDropModule = sdk.getBundleDropModule(BUNDLE_DROP_ADDRESS);
@@ -167,7 +167,7 @@ const App = () => {
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to BoringDAO 🥱</h1>
+        <h1>Welcome to MCVDAO 🥱</h1>
         <button onClick={() => connectWallet("injected")} className="btn-hero">
           Connect your wallet
         </button>
@@ -178,7 +178,7 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🥱 BoringDAO Member Page</h1>
+        <h1>🥱 MCVDAO Member Page</h1>
         <p>Congratulations on being officially bored</p>
         <div>
           <div>
@@ -187,7 +187,7 @@ const App = () => {
               <thead>
                 <tr>
                   <th>Address</th>
-                  <th>$BOREDOM Amount</th>
+                  <th>$MCVD Amount</th>
                 </tr>
               </thead>
               <tbody>
@@ -312,7 +312,7 @@ const App = () => {
 
   return (
     <div className="mint-nft">
-      <h1>Mint your free 🥱 BoringDAO Membership NFT</h1>
+      <h1>Mint your free 🥱 MCVDAO Membership NFT</h1>
       <button
         disabled={isClaiming}
         onClick={() => mintNft()}
