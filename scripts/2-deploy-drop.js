@@ -15,9 +15,9 @@ const app = sdk.getAppModule(process.env.ALCHEMY_APP_ADDRESS);
 (async () => {
   try {
     const bundleDropModule = await app.deployBundleDropModule({
-      name: "BoringDAO Membership",
-      description: "A boredom (anti-)fan club",
-      image: readFileSync("scripts/assets/boringdao-nft.gif"),
+      name: "MCVDAO Membership",
+      description: "This NFT will give you access to MCVDAO",
+      image: readFileSync("scripts/assets/mcvdaoNFT.png"),
       primarySaleRecipientAddress: ethers.constants.AddressZero,
     });
 
